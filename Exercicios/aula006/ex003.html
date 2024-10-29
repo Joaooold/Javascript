@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro Script</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        h1 {
+            color: yellow;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>oi como voçe estar</p>
+    <script>
+        //Podemos usar Number.parseInt e Number.parseFloat para dizer que é um número 
+
+       // var n1 = Number.parseInt(window.prompt('Diga um número'))
+       // var n2 = Number.parseFloat(window.prompt('Diga outro número'))
+
+       // var s = n1 + n2
+
+       // window.alert('O resultado é ' + s)
+            //number + number é adição
+            //string + string é concatenação
+
+        //Também só podemos colocar que Number server para usar os dois parseInt e parseFloat exemplo
+        var n1 = Number(window.prompt('Diga um número'))
+        var n2 = Number(window.prompt('Diga outro número'))
+        var s = n1 + n2
+        window.alert(`O resultado da sua nota é ${n1} + ${n2} = ${s}`)
+
+    </script>
+</body>
+</html>
