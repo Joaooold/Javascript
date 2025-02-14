@@ -1,0 +1,1 @@
+console.log("Criei uma nova pasta de scripts")
