@@ -43,3 +43,4 @@ nome = 'lucelia';
 console.log(nome);
 
 console.log('formarando pelo prettier');
+
