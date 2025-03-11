@@ -30,6 +30,5 @@ console.log("A quantidade no estoque é suficiente: "+ estoqueTotal)
 let booleano = true;
 let quantidadeProduto = 10;
 let quantidadeNecessaria = 15;
-let quantidadeFalta = quantidadeProduto >= quantidadeNecessaria 
-let produtoDisponivel = !booleano
-console.log(`O produto está disponivel e tem quantidade suficiente: ${quantidadeFalta}, O produto está indisponível: ${produtoDisponivel}`)
+let quantidadeFalta = quantidadeProduto >= quantidadeNecessaria && !booleano
+console.log(`O produto está disponivel e tem quantidade suficiente: ${quantidadeFalta}, O produto está indisponível: ${quantidadeFalta}`)
