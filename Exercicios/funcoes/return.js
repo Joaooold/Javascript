@@ -8,3 +8,11 @@ let pedido = {
     batatafrita: 5,
     suco: 4
 }
+
+function somaPedido() {
+    let soma = pedido.lanche + pedido.batatafrita + pedido.suco
+    return soma
+
+}
+
+console.log(somaPedido())
