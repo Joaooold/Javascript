@@ -1,14 +1,22 @@
 // Pergunta 01
-function notas(N1,N2,N3) {
-    return alunoNota = N1 + N2 + N3 
+function notasMedia(N1,N2,N3) {
+    const mediaDasNotas = (N1 + N2 + N3) / 3
+    console.log(`A média desse aluno é ${mediaDasNotas}`)
 
 }
-notas(6,7,9)
-console.log(`A média desse aluno é ${alunoNota}`)
+notasMedia(6, 5, 4)
 
-function mediaFinal(N4) {
-    return notaFinal = notas(6,7,9) + N4/2
+// Pergunta 02
+function notasMediaAlterado(nota1,nota2,nota3) {
+    const mediaDasNotas = (nota1 + nota2 + nota3) / 3
+    return mediaDasNotas
+}
+
+function notasMediaFinal(nota1, nota2, nota3, notaFinal) {
+    const medianotas = notasMediaAlterado(nota1, nota2, nota3) / 3
+    const mediaFinal = (medianotas + notaFinal) / 2
+    console.log(mediaFinal)
 
 }
-mediaFinal(5)
-console.log(`a nota final desse aluno é ${notaFinal}`)
+
+notasMediaFinal(2,4,5,6)
