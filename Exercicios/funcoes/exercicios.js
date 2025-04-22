@@ -20,3 +20,20 @@ function notasMediaFinal(nota1, nota2, nota3, notaFinal) {
 }
 
 notasMediaFinal(2,4,5,6)
+
+// Pergunta 03
+
+function temperaturaParaFarenheit(temperaturaCelsius) {
+    const tempFarenheit = (9/5) * temperaturaCelsius + 32
+    console.log(`A temperatura para Farenheit é ${tempFarenheit}°F`)
+}
+
+temperaturaParaFarenheit(30)
+
+// Pergunta 04
+function brunoPagarImposto(valorEtiqueta) {
+const brunoPagar = 1.08875 * valorEtiqueta
+console.log(`Valor a ser pago é ${brunoPagar}`)
+}
+
+brunoPagarImposto(150)
