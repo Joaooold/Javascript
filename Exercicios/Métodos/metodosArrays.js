@@ -62,3 +62,5 @@ console.log(frutas02.some(
         return fruta.includes("k")
     }
 )) // Verifica se pelo menos um elemento esta certo
+
+console.log(frutas02.join(" - ")) // Transforma os elemento em uma string
