@@ -17,5 +17,10 @@ console.log(produtos03.includes("agenda"))
 
 // Pergunta 04
 let numeros = [2, 5, 8, 1]
+let numeroSome = numeros.some((numero => numero > 7))
+console.log("Resultado:",numeroSome)
 
 // Pergunta 05
+let numeros2 = [4, 6, 8, 2]
+let numerosEvery = numeros2.every((numero => numero > 3))
+console.log("Resultado:",numerosEvery)
