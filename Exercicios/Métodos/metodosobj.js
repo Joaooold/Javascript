@@ -60,3 +60,5 @@ console.log(joao.surf, joao.nome)
 console.log(joao)
 console.log(Object.hasOwn(joao, "nome")) // Verifica se a propriedade existe
 
+
+
