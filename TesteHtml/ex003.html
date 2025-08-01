@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="number1" id="number1"> +
+    <input type="number" name="number2" id="number2">
+    <input type="button" value="Some" onclick="somar()">
+
+    <script>
+        // Os numeros que vem do input de numeros são Strings e tem que transformar em numeros usando o atributo (Number e Value)
+        function somar() {
+            let txt1 = document.getElementById("number1")
+            let txt2 = document.getElementById("number2")
+            let n1 = Number(txt1.value)
+            let n2 = Number(txt2.value)
+            let res = n1 + n2
+            alert(`O resultado é: ${res}`)
+            
+        }
+    </script>
+</body>
+</html>

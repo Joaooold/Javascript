@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()-->
+        Interaja...
+    </div>
+    <script>
+        // Usando eventos de click e mouse em javaScript
+        let click = document.getElementById("area")
+        // Adicionando eventos no javaScript para nao usar no html
+        click.addEventListener("click", clicar)
+        click.addEventListener("mouseenter", entrar)
+        click.addEventListener("mouseout", sair)
+        
+        function clicar() {  
+            click.style.backgroundColor = "red"
+            click.style.color = "black"
+            click.style.cursor = "pointer"
+            click.innerText = "Clicou!!"
+        }
+         function entrar(){
+            click.style.backgroundColor = "blue"
+            click.style.color = "red"
+            click.innerText = "Entrou"
+
+         }
+          function sair(){
+            click.style.backgroundColor = "green"
+            click.style.color = "red"
+            click.innerHTML = "Saiu"
+
+          }
+    </script>
+</body>
+</html>

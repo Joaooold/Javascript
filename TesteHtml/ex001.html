@@ -8,14 +8,16 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
+           
         }
     </style>
 </head>
 <body>
     <h1 id="titulo">Aprendendo DOM</h1>
-    <p>entendendo o DOM</p>
+    <p class="toto">entendendo o DOM</p>
     <p>Aqui vai o resultado</p>
     <div>clique em mim</div>
+    <button onclick="alerta()"> Aperte aqui</button>
 
 </body>
 <script>
@@ -29,7 +31,16 @@ let paragrafo = window.document.getElementsByTagName("p")[1]
     paragrafo.style.color = "yellow"
 
 let corpo = document.body
-corpo.style.background = "red"
+    corpo.style.background = "red"
+
+let allParagrafos = document.querySelectorAll("p")
+allParagrafos.style.background = "blue"
+
+function alerta() {
+    window.alert("Você apertou o botão")
+}
+
+
 
 </script>
 </html>
