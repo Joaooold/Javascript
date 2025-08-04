@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Testando Condições</h1>
+    <label for="numero">Velocidade do veiculo: </label>
+    <input type="number" name="numero" id="numero"> Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div class="res"></div>
+    <script>
+        let numero = document.getElementById("numero")
+        let res = document.querySelector("div.res")
+        let vel = Number(numero.value)
+        function calcular() {
+            if (vel < 50){
+                res.innerHTML = `<p>Sua velocidade foi <strong>Aprovada</strong>`
+            }
+            res.innerHTML += "dirija com cuidado"
+        }
+    </script>
+</body>
+</html>
