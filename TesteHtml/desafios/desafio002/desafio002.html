@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Horas do dia</title>
+</head>
+<body id="body">
+    <header>
+            <h1>Verificador de idade</h1>
+    </header>
+
+    <section id="secao">
+        <div id="secao-ano"> 
+            <label for="ano">Ano de nascimento: </label>
+            <input type="number" name="ano" id="ano" required>
+        </div>
+
+        <div id="check">
+            <p>
+                Sexo:
+                <input type="radio" name="radsex" id="Homen" checked>
+                <label for="Homen">Masculino</label>
+                <input type="radio" name="radsex" id="Mulher">
+                <label for="Mulher">Feminino</label>
+            </p>
+        </div>
+        <input type="button" value="Verificar" onclick="verificar()">
+
+        <p id="paragrafo">Preencha os dados acima para ver o resultado</p>
+        <div id="img-flex" class="img" >
+
+            <img src="" alt="">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; João Batista Silva Filho</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
