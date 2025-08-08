@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Repetições</title>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div> 
+            <p>
+                <label for="num1">Início:</label>
+                <input type="number" name="num1" id="num1" required>
+            </p>
+            <p>
+                <label for="num2">Fim:</label>
+                <input type="number" name="num2" id="num2">
+            </p>
+            <p>
+                <label for="num3">Passo:</label>
+                <input type="number" name="num3" id="num3">
+            </p>
+            <p>
+                <input type="submit" value="Contar" onclick="contarNumeros()">
+            </p>
+        </div>
+        <div id="resultado">
+            Contando:
+        </div>
+    </section>
+    <footer>
+        <p>&copy; João Batista Silva Filho</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
