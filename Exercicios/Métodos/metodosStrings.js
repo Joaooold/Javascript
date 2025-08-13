@@ -22,7 +22,7 @@ console.log(string.indexOf("o")) // Para saber o índice do elemento/palavra
 
 // split(delimiter, limit)
 let frutas = "Abacate, banana, pera, morango"
-console.log(frutas.split(",", 3)) // Delimitador + limite de elementos da nossa lista
+console.log(frutas.split(",")) // Delimitador + limite de elementos da nossa lista
 console.log(frutas.split())
 let texto = frutas.split(/\s+/) // expressão regular de ignorar os espaços
 console.log(texto)

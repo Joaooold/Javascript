@@ -22,7 +22,7 @@ let numeros = [2, 4, 6, 20, 10, 3, 12, 7, 1]
 letras.sort() // deixa as coisas de forma ordenada
 console.log(letras)
 
-numeros.sort() // Qaundo for numeros ordena de forma diferente
+numeros.sort() // Quando for numeros ordena de forma diferente
 console.log(numeros)
 
 letras.reverse() // Inverte as coisas
@@ -31,7 +31,7 @@ console.log(letras)
 numeros.reverse()
 console.log(numeros)
 
-let concatenaçãoArray = letras.concat(numeros) // Faz a concatenação das variaveis
+let concatenaçãoArray = letras.concat(numeros) // Faz a concatenação das lista
 console.log(concatenaçãoArray)
 
 // Aula 03
@@ -42,7 +42,7 @@ console.log(frutas.indexOf("laranja")) // Verifica a posição do elemento
 // frutas.splice(0, 1) splice(inicio, quantidade de elementos)
 
 
-frutas.splice(0, 3, 10) // splice(inicio, quantidade de elementos, valor substituido)
+frutas.splice(0, 2, 10) // splice(inicio, quantidade de elementos, valor substituido)
 console.log(frutas)
 
 // Aula 04
