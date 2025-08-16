@@ -4,8 +4,8 @@ let produtos = {
     disponibilidade: true,
 }
 
-console.log(Object.keys(produtos)) // propriedades do objeto em lista
-console.log(Object.values(produtos)) // valor da propriedade de objeto em lista
+console.log(Object.keys(produtos)) // nome de todas as propriedades em lista
+console.log(Object.values(produtos)) // valor de todas as propriedades em lista
 console.log(Object.entries(produtos)) // lista contendo lista de propriedades e valores
 
 // Aula 02
