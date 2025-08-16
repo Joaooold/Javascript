@@ -39,3 +39,20 @@ console.log( numero.toString(8)) // Base octal
 // Converta uma String para um numero inteiro, considerando a base númerica (opcional)
 console.log(Number.parseInt(flutuanteString))
 console.log(Number.parseInt(flutuanteString, 5))
+
+console.log("Aula 3 //////////////////////////////////////////")
+// NaN 
+let notANumber = NaN
+let notANumber2 = 0 / 0 
+let string = Number("ola")
+let mensagem = "Olá João"
+console.log(notANumber, notANumber2, string)
+
+// Verifica se o valor passado é NaN
+console.log(Number.isNaN(notANumber))
+console.log(Number.isNaN(notANumber2))
+console.log(Number.isNaN(string))
+console.log(Number.isNaN(mensagem)) // False porque não verifica se é número - verifica se é NaN
+console.log(40)
+console.log(43)
+
