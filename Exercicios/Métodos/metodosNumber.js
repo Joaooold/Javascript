@@ -53,6 +53,17 @@ console.log(Number.isNaN(notANumber))
 console.log(Number.isNaN(notANumber2))
 console.log(Number.isNaN(string))
 console.log(Number.isNaN(mensagem)) // False porque não verifica se é número - verifica se é NaN
-console.log(40)
-console.log(43)
+console.log(Number.isNaN(40)) // False porque são numeros
+console.log(Number.isNaN(40.43534))
+
+// Infinity
+let infinito = Infinity
+let infinito2 = -1 / 0 
+let multiplicação = Number.MAX_VALUE * 2
+
+console.log(Number.isFinite(infinito))
+console.log(Number.isFinite(infinito2))
+console.log(Number.isFinite(multiplicação))
+
+
 
