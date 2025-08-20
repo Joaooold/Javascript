@@ -29,3 +29,20 @@ let lista = [8,44,56,67,22,5]
  console.log(Math.max(lista)) // tambem retorna NaN
 console.log(Math.max(...lista)) // spread operador ... (espalha espalha informações da lista)
 console.log(Math.min(...lista))
+
+// Data
+console.log("Aula Data ///////////////////////////////////////////////////////////////")
+let dataAtual = new Date()
+console.log(dataAtual)
+console.log(dataAtual.getDate())
+console.log(dataAtual.getDay())
+console.log(dataAtual.getFullYear())
+console.log(dataAtual.getHours())
+console.log(dataAtual.getMilliseconds())
+console.log(dataAtual.getMinutes())
+console.log(dataAtual.getMonth() + 1) // Mês vão de 0 a 11 
+console.log(dataAtual.getTime())
+
+let timeStamp = dataAtual.getTime()
+console.log(timeStamp)
+console.log(new Date(1755700837301))
