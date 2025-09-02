@@ -1,0 +1,3 @@
+comando criar arquivos
+
+for ($i=1; $i -le 9; $i++) {New-Item -Name "ex0$i.js" -ItemType File }
