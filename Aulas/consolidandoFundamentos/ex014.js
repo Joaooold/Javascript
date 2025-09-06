@@ -8,7 +8,8 @@ Exemplo Saída: // ["Alto Gasto", "Gasto Controlado", "Alto Gasto", "Gasto Contr
 Gasto"]*/
 
 function controleDespesas(despesas) {
-  return despesas.map((despesa) => (despesa > 100 ? "Alto Gasto" : "Gasto Controlado"));
+  // map cria um novo array anonimo com arrow function vazia
+  return despesas.map((novaDespesa) => (novaDespesa > 100 ? "Alto Gasto" : "Gasto Controlado"));
 }
 const despesas = [150, 80, 200, 60, 120];
 const resultado = controleDespesas(despesas);
