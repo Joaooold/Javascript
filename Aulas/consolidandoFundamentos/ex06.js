@@ -7,7 +7,7 @@ Exemplo Saída: // 17 */
 
 const calcularPontos = (n1, n2) => {
   let vitoria = n1 * 3;
-  let impate = n2 * 1;
+  let impate = n2;
   return vitoria + impate;
 };
 console.log(calcularPontos(5, 2));
