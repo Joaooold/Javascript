@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicios eventos</title>
+</head>
+<body>
+    <h2>Eventos em elementos HTML</h2>
+
+    <p onmouseenter="passar()" onmouseout="passarSair()">Passe o mouse aqui para mudar a cor do texto</p>
+
+    <button onclick="clicar()">Clique aqui</button>
+
+    <input type="text" placeholder="Digite aqui" onfocus="focar()" onblur="desfocar()">
+
+    <img src="imagem1.png" alt="Imagem misteriosa" onmouseenter="entrarImg()" onmouseout="sairImg()">
+    <script src="script.js"></script>
+</body>
+</html>
