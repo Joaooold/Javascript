@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar elementos</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      button {
+        padding: 5px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Criando novos elementos no DOM com Javascript.</h1>
+
+    <button onclick="criarElementoInnerText()">Adiconar elementos com InnerText</button>
+    <button onclick="criarElementoInnerHtml()">Adicionar elementos com InnerHtml</button>
+    <button onclick="criarElementoTextContent()">Adicionar elementos com Text Content</button>
+
+    <ol id="itens-lista"></ol>
+    <script src="script.js"></script>
+  </body>
+</html>
