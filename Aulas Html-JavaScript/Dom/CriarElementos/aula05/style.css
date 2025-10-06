@@ -2,9 +2,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
     display: flex;
+    flex-flow: column ;
+    align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: #f4f4f4;
+}
+#meuElemento{
+    background-color: #0452a5;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 15px;;
+}
+.square {
+    border-radius: 0%;
+}
+.circle {
+    border-radius: 100%;
 }
 
 
