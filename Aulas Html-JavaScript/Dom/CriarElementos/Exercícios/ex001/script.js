@@ -2,13 +2,21 @@ const lista = document.querySelector("#taskList");
 const input = document.querySelector("#taskInput");
 
 function addTask() {
-  if (input.value === "") {
-    alert("você precisa adicionar algo");
-  } else {
-    const inputValor = input.value;
+  if (input.value !== "") {
     const novaLi = document.createElement("li");
-    novaLi.innerHTML = `${inputValor}`;
+    const removerButton = document.createElement("button");
+
+    novaLi.textContent = input.value + ": ";
+    removerButton.textContent = "Remover";
+
+    // remover item
+    removerButton.onclick = function () {
+      lista.removeChild(novaLi);
+    };
     lista.appendChild(novaLi);
+    novaLi.appendChild(removerButton);
+  } else {
+    alert("você precisa adicionar algo");
   }
-  input.value = " "
+  input.value = "";
 }
