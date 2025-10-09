@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default</title>
+</head>
+<body>
+    <h1>Prevent Default</h1>
+    <a href="https://github.com/Joaooold?tab=repositories" id="meuLink">Clique aqui para ir para o meu GitHub</a>
+    <script>
+        const link = document.querySelector("#meuLink")
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault()
+            console.log("O prevent Default funcionou")
+
+            window.location.href = "https://www.google.com"
+        })
+    </script>
+</body>
+</html>

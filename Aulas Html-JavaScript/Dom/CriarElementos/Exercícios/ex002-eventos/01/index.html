@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios 01</title>
+    <style>
+      #changeColor {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Passe o mouse em cima do bloco</h1>
+    <div id="changeColor"></div>
+    <script>
+      const cor = document.getElementById("changeColor");
+      cor.addEventListener("mouseover", function (e) {
+        cor.style.backgroundImage = "linear-gradient(to top, red, black)";
+        console.log("mudou a cor para vermelho");
+      });
+      cor.addEventListener("mouseout", function (e) {
+        cor.style.backgroundImage = "linear-gradient(to left, green, yellow)";
+        console.log("mudou a cor para verde");
+      });
+    </script>
+  </body>
+</html>

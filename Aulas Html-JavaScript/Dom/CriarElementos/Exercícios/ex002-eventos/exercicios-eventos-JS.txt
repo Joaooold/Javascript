@@ -1,0 +1,82 @@
+Exercícios - Eventos Javascript - addEventListener, removeEventListener e preventDefault.
+
+Instruções para os exercícios:
+- Abra o arquivo HTML em um navegador para testar a interações dos eventos com os elementos.
+- Verifique o console do navegador para visualizar mensagens de log que indicam quando os eventos são acionados.
+
+Exercício 1 : Alteração de Cor ao Passar o Mouse
+
+Passo 1: Configuração do Arquivo HTML
+- Crie um novo arquivo HTML.
+- Estruture o arquivo com as tags HTML básicas.
+
+Passo 2: Adição de um Elemento <div>
+- No corpo (<body>) do arquivo HTML, adicione um elemento <div> com um id específico, por exemplo, id="changeColor".
+
+Passo 3: Estilização do Elemento com CSS
+- No cabeçalho (<head>) do arquivo HTML, adicione um bloco de estilo CSS.
+- Defina um estilo para o elemento <div> com o ID especificado anteriormente (#changeColor), atribuindo-lhe dimensões e uma cor de fundo inicial.
+
+Passo 4: Interação com JavaScript
+- Dentro da tag <script> no final do arquivo HTML, selecione o elemento <div> utilizando document.getElementById() e armazene-o em uma variável.
+- Crie duas funções JavaScript: uma para lidar com o evento de passar o mouse sobre o elemento (handleMouseOver()), e outra para lidar com o evento de tirar o mouse de cima do elemento (handleMouseOut()).
+- Dentro dessas funções, utilize element.style.backgroundColor para alterar a cor de fundo do elemento quando o evento ocorrer.
+
+Passo 5: Adição de Event Listeners
+- Use element.addEventListener() para adicionar event listeners ao elemento <div> para os eventos mouseover e mouseout, conectando-os às funções criadas anteriormente.
+
+Exercício 2 : Remoção de Event Listener após N cliques
+
+Passo 1: Estrutura HTML Simples
+- Crie um novo arquivo HTML e estruture o arquivo com as tags básicas
+- Adicione um botão (<button>) com um ID específico, por exemplo, id="btn".
+
+Passo 2: Manipulação de Eventos em JavaScript
+- No <script> ao final do arquivo, selecione o botão e armazene-o em uma variável.
+- Inicialize uma variável count que armazenará o número de cliques no botão.
+- Crie uma função JavaScript (handleClick()) que será chamada sempre que o botão for clicado. 
+- Dentro desta função, incremente a variável count e exiba a quantidade de cliques no console.
+- Adicione uma condição dentro da função handleClick() para verificar se o número de cliques atingiu ou excedeu um determinado limite (por exemplo, 3 cliques). 
+- Se a condição for atendida, remova o event listener do botão usando btn.removeEventListener().
+
+Passo 3: Adição de Event Listener
+- Use btn.addEventListener() para adicionar um event listener ao botão para o evento click, conectando-o à função handleClick() criada anteriormente.
+
+Exercício 3: Prevenção de Envio de Formulário
+
+Passo 1: Estrutura HTML
+- Crie um arquivo HTML e inclua uma estrutura básica.
+- Adicione um formulário (<form>) com um ID específico, por exemplo, id="myForm".
+- No formulário, adicione um campo de entrada (<input>) do tipo texto e um botão (<button>) para enviar.
+
+Passo 2: Captura de Elementos e Eventos em JavaScript
+- No <script> ao final do arquivo, selecione o formulário e armazene-o em uma variável.
+- Crie uma função JavaScript (handleSubmit()) para lidar com o evento de envio do formulário. 
+- Dentro desta função, utilize event.preventDefault() para prevenir o comportamento padrão de envio do formulário e exiba uma mensagem no console.
+
+Passo 3: Adição de Event Listeners
+- Utilize form.addEventListener() para adicionar um event listener ao formulário para o evento submit, conectando-o à função handleSubmit().
+
+Passo 4: Prevenção do Envio com Enter no Campo de Entrada
+- Selecione o campo de entrada dentro do formulário e armazene-o em uma variável.
+- Adicione um event listener para o evento keypress ao campo de entrada para detectar a tecla "Enter" pressionada 
+- Utilize event.preventDefault() para prevenir o envio do formulário ao pressionar "Enter".
+
+Exercício 4: Prevenir Rolagem para Baixo e Remover Event Listener
+
+Passo 1: Estrutura HTML
+- Crie um novo arquivo HTML e sua estrura básica.
+- Adicione um cabeçalho (<h1>) para indicar a finalidade do exercício.
+
+Passo 2: CSS (Opcional)
+- Acrescente um estilo CSS no <head> para definir a altura do corpo (body) com height: 2000px; para simular uma página longa.
+
+Passo 3: JavaScript para Prevenir a Rolagem
+- No <body> do arquivo, inclua um script que utilize variáveis para contar o número de pressionamentos da tecla "ArrowDown".
+- Crie uma função preventScroll(event) que será chamada sempre que a tecla for pressionada. 
+- Dentro dessa função, incremente a variável count para contar os pressionamentos da tecla.
+- Verifique se a tecla pressionada é "ArrowDown". Se for, use event.preventDefault() para desativar a rolagem para baixo.
+- Se o número de pressionamentos atingir ou exceder 10, remova o event listener com document.removeEventListener().
+
+Passo 4: Adição do Event Listener
+- Use document.addEventListener() para adicionar o event listener à tecla "ArrowDown", conectando-o à função preventScroll() criada anteriormente.

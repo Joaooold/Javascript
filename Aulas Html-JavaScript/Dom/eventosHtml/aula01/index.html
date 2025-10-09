@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eventos em JS</title>
+  </head>
+  <body>
+    <h1>Eventos com Javascript</h1>
+
+    <button id="myButton">clique aqui</button>
+    <script>
+      const button = document.getElementById("myButton");
+      button.addEventListener("click", Clicar);
+      function Clicar() {
+        console.log("Você clicou no botão");
+      }
+      // para remover a função
+      setTimeout(function () {
+        button.removeEventListener("click", Clicar);
+        console.log("Você removeu a função clicar em 5 segundos");
+      }, 5000);
+      // settimeout conta em milissegundos
+    </script>
+  </body>
+</html>

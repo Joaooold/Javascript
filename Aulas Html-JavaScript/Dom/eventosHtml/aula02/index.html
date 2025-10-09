@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eventos em JS</title>
+  </head>
+  <body>
+    <h1>diferenças entre atributos e addEventListener</h1>
+    <button id="myButton">clique aqui</button>
+    <script>
+      const button = document.querySelector("#myButton");
+      // utilizar o addEnventListener para adicionar 2 eventos manipuladores de click
+      button.addEventListener("click", function (event) {
+        console.log("Manipulador de evento 1 usando o addEventListener");
+      });
+      button.addEventListener("click", function (event) {
+        console.log("Manipulador de evento 2 usando o addEventListener");
+      });
+      // utilizar o onclick para adicionar 2 eventos manipuladores de click
+      button.onclick = function(event) {
+        console.log("Manipulador de evento 1 usando o onclick")
+      }
+      button.onclick = function(event) {
+        console.log("Manipulador de evento 2 usando o onclick")
+      }
+    </script>
+  </body>
+</html>
