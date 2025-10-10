@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remoção de eventos</title>
+  </head>
+  <body>
+    <h1>Remoção de eventos</h1>
+    <button id="btn">aperte aqui</button>
+    <script>
+      const button = document.querySelector("#btn");
+      let count = 0;
+      function handleClick() {
+        count++
+        console.log(`Contagem de cliques ${count}`);
+        if (count >= 3) {
+          button.removeEventListener("click", handleClick);
+          console.log("limite de cliques atingidos");
+        }
+      }
+      button.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
