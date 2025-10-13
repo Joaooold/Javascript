@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolagem para baixo</title>
+    <style>
+      body {
+        height: 2000px;
+        background-image: linear-gradient(to bottom, red, yellow);
+      }
+    </style>
+  </head>
+  <body id="corpo">
+    <h1>Prevenir Rolagem para Baixo e Remover Event Listener</h1>
+    <script>
+      const body = document.getElementById("corpo");
+      let count = 0;
+      const onKeyDown = function (event) {
+        if (event.key === "ArrowDown") {
+          console.log(count++);
+          event.preventDefault();
+          if (count >= 10) {
+            body.removeEventListener("keydown", onKeyDown);
+            console.log("Rolagem desativada");
+          }
+        }
+      };
+
+      body.addEventListener("keydown", onKeyDown);
+    </script>
+  </body>
+</html>
