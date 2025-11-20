@@ -1,0 +1,30 @@
+{
+  "loja": {
+    "nome": "minha loja de Brinquedo",
+    "localizacao": "Rua principal, 123, Cidade Feliz",
+    "produto": [
+      {
+        "id": 1,
+        "nome": "boneco",
+        "preco": 19.99,
+        "Categoria": "Brinquedo",
+        "estoque": 50
+      },
+      {
+        "id": 2,
+        "nome": "Carrinho",
+        "preco": 25.99,
+        "Categoria": "Brinquedo",
+        "estoque": 20
+      },
+      {
+        "id": 3,
+        "nome": "Quebra-Cabeca",
+        "preco": 9.99,
+        "Categoria": "Jogos",
+        "estoque": 10
+      }
+    ],
+    "AdicionarProduto": "function novoProduto(nome, preco, Categoria, estoque) {lógica de programação}"
+  }
+}
