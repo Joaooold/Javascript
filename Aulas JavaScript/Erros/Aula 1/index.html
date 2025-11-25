@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <h1>Estoque do Armazém Hashtag</h1>
+    <section>
+      <table>
+        <thead>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </thead>
+        <tbody>
+          <tr id="linha-caneca">
+            <td id="celula-nome-caneca">Caneca</td>
+            <td id="preco-caneca">R$: 50,00</td>
+            <td id="quantidade-caneca">15</td>
+          </tr>
+          <tr id="linha-camisa">
+            <td id="celula-nome-camisa">Camisa Preta</td>
+            <td id="preco-camisa">R$: 80,00</td>
+            <td id="quantidade-camisa">20</td>
+          </tr>
+          <tr id="linha-caderno">
+            <td id="celula-nome-caderno">Caderno 100 folhas</td>
+            <td id="preco-caderno">R$: 40,00</td>
+            <td id="quantidade-caderno">20</td>
+          </tr>
+          <tr id="linha-garrafa">
+            <td id="celula-nome-garrafa">Garrafa Térmica</td>
+            <td id="preco-garrafa">R$: 80,00</td>
+            <td id="quantidade-garrafa">30</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button id="botao-dobrar-quantidade">Dobrar Quantidades</button>
+        <button id="botao-desconto">Desconto de 10%</button>
+        <button id="botao-reduzir-quantidade">
+          Reduzir quantidades pela metade
+        </button>
+        <button id="botao-reajuste-precos">Aumentar preços em 5%</button>
+        <button id="avaliar-cumprimento-meta">Avaliar cumprimento de meta</button>
+      </div>
+    </section>
+    <img
+      src="./assets/warehouse-industry-with-storage-buildings_441769-251.avif"
+      alt="Ilustração do Armazém Hashtag" />
+  </body>
+</html>
