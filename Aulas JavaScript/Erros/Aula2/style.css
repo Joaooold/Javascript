@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  --main-light-color: #f2e3d5;
+  --main-dark-blue: #024959;
+  --main-darkest-blue: #012e40;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--main-light-color);
+  color: var(--main-darkest-blue);
+}
+
+#pythagoras {
+  max-width: 600px;
+}
+
+.answer-container {
+  position: relative;
+  text-align: center;
+}
+
+#answer {
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  font-weight: bold;
+  padding: 2em;
+  border: 2px solid var(--main-darkest-blue);
+  border-radius: 10px;
+}
+
+.left-point {
+  width: 0;
+  height: 0;
+  border-left: 0.5vh solid transparent;
+  border-right: 0.5vh solid transparent;
+  border-top: 5vh solid var(--main-darkest-blue);
+  position: absolute;
+  top: 90%;
+  left: -12%;
+  transform: rotate(60deg);
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+label {
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+button {
+  all: unset;
+  border-radius: 5px;
+  background-color: var(--main-dark-blue);
+  color: var(--main-light-color);
+  padding: 0.25em;
+}
+
+#calculate-hypotenuse {
+  margin-top: 2em;
+}
+
+.hidden-element {
+  visibility: hidden;
+}

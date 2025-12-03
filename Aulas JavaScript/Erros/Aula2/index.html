@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pythagoras' Web Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Calcule a Hipotenusa de qualquer Triângulo Retângulo</h2>
+    <div class="answer-container">
+      <img
+        src="assets/pythagoras.jpeg"
+        alt="Busto de Pitágoras."
+        id="pythagoras"
+      />
+      <div id="answer" class="hidden-element"></div>
+    </div>
+    <div class="inputs-container">
+      <label for="side-1">Primeiro Cateto</label>
+      <input id="side-1" type="text" />
+      <label for="side-2">Segundo Cateto</label>
+      <input id="side-2" type="text" />
+      <button id="calculate-hypotenuse">Calcular Hipotenusa</button>
+    </div>
+    <script src="calculatePythagoras.js"></script>
+  </body>
+</html>
