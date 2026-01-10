@@ -13,7 +13,7 @@ function meuCallbackDados(dados) {
   console.log(`Recebido no callback: ${dados}`);
 }
 
-operacaoAssincrona(meuCallbackDados);
+// operacaoAssincrona(meuCallbackDados);
 
 ///////////////////////////////////////////////////////////////////
 
@@ -38,4 +38,31 @@ function callbackErroOuSucesso(erro, resultado) {
   }
 }
 
-operacaoComErro(callbackErroOuSucesso);
+// operacaoComErro(callbackErroOuSucesso);
+
+function tarefa1(callback) {
+  setTimeout(() => {
+    console.log("Tarefa 1 concluída!");
+    callback();
+  }, 1000);
+}
+function tarefa2(callback) {
+  setTimeout(() => {
+    console.log("Tarefa 2 concluída!");
+    callback();
+  }, 1000);
+}
+function tarefa3(callback) {
+  setTimeout(() => {
+    console.log("Tarefa 3 concluída!");
+    callback();
+  }, 1000);
+}
+
+tarefa1(function () {
+  tarefa2(function () {
+    tarefa3(function () {
+      console.log("Todas as tarefas foram concluídas");
+    });
+  });
+});
