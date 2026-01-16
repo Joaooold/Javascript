@@ -40,29 +40,51 @@ function callbackErroOuSucesso(erro, resultado) {
 
 // operacaoComErro(callbackErroOuSucesso);
 
-function tarefa1(callback) {
-  setTimeout(() => {
-    console.log("Tarefa 1 concluída!");
-    callback();
-  }, 1000);
+async function tarefa1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Tarefa 1 concluída!");
+      resolve();
+    }, 1000);
+  });
 }
-function tarefa2(callback) {
-  setTimeout(() => {
-    console.log("Tarefa 2 concluída!");
-    callback();
-  }, 1000);
+async function tarefa2() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Tarefa 2 concluída!");
+      resolve();
+    }, 1000);
+  });
 }
-function tarefa3(callback) {
-  setTimeout(() => {
-    console.log("Tarefa 3 concluída!");
-    callback();
-  }, 1000);
+async function tarefa3() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Tarefa 3 concluída!");
+      resolve();
+    }, 1000);
+  });
 }
 
-tarefa1(function () {
-  tarefa2(function () {
-    tarefa3(function () {
-      console.log("Todas as tarefas foram concluídas");
-    });
-  });
-});
+// Resolução de async/await
+async function realizarFuncoes() {
+  await tarefa1()
+  await tarefa2()
+  await tarefa3()
+}
+
+realizarFuncoes()
+// Resolução de promises
+// tarefa1()
+//   .then(() => tarefa2())
+//   .then(() => tarefa3())
+//   .then(() => console.log("Todas as tarefas foram concluídas"));
+
+
+  // Encadeamento com callbacks
+// tarefa1(function () {
+//   tarefa2(function () {
+//     tarefa3(function () {
+//       console.log("Todas as tarefas foram concluídas");
+//     });
+//   });
+// });
