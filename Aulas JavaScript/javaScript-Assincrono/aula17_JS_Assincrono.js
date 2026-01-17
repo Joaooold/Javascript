@@ -116,7 +116,8 @@ function operacaoEncadeada() {
     .then(() => operacao2())
     .then(() => {
       console.log("Todas as operações concluídas");
-    });
+    });;
+    
 }
 
 // Usando async/await para encadear operações assíncronas
