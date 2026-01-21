@@ -13,7 +13,7 @@ function meuCallbackDados(dados) {
   console.log(`Recebido no callback: ${dados}`);
 }
 
-// operacaoAssincrona(meuCallbackDados);
+operacaoAssincrona(meuCallbackDados);
 
 ///////////////////////////////////////////////////////////////////
 
@@ -72,7 +72,8 @@ async function realizarFuncoes() {
   await tarefa3()
 }
 
-realizarFuncoes()
+// realizarFuncoes()
+
 // Resolução de promises
 // tarefa1()
 //   .then(() => tarefa2())
