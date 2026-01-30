@@ -2,12 +2,13 @@
 // Escreva uma função imprimirMensagem que aceita uma mensagem e uma função de retorno de chamada
 // (callback). A função deve imprimir a mensagem no console e, em seguida, invocar a função de retorno de
 // chamada.
-function imprimirMensagem(mensagem) {
-  mensagem("Mensagem do callback");
-}
-
-function callbackMensagem(mensagemcallback) {
-  console.log(`Texto: ${mensagemcallback}`);
-}
-
-imprimirMensagem(callbackMensagem);
+const imprimirMensagem = (mensagem, callback) => {
+  console.log(mensagem);
+  callback();
+};
+imprimirMensagem("Mensagem de teste", () => {
+  console.log("Esta mensagem é resultado de uma callback");
+});
+imprimirMensagem("Outra mensagem", () => {
+  console.log(`${2+5}`)
+});
