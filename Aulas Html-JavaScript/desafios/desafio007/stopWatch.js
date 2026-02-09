@@ -5,6 +5,7 @@ class StopWatch {
   start() {
     this.intervalID = setInterval(() => {
       this.elapsedTimeInSeconds++;
+      console.log(StopWatch.formatTime(this.elapsedTimeInSeconds));
     }, 1000);
   }
   stop() {
@@ -12,6 +13,25 @@ class StopWatch {
   }
   reset() {
     this.elapsedTimeInSeconds = 0;
+  }
+  static formatTime(timeSeconds) {
+    const hours = Math.floor(timeSeconds / 3600);
+    const minutes = Math.floor((timeSeconds % 3600) / 60);
+    const seconds = timeSeconds - hours * 3600 - minutes * 60;
+
+    return `${StopWatch.zeroPadding(hours)}:${StopWatch.zeroPadding(minutes)}:${StopWatch.zeroPadding(seconds)}`;
+  }
+
+  static zeroPadding(originalNumber, desireAmountDigits = 2) {
+    let StringNumber = String(originalNumber);
+    const zeroRequired = desireAmountDigits - StringNumber.length;
+    if (zeroRequired <= 0) {
+      return StringNumber;
+    }
+    for (let counter = 0; counter < zeroRequired; counter++) {
+      StringNumber = `0${StringNumber}`;
+      return StringNumber;
+    }
   }
 }
 
