@@ -5,7 +5,7 @@ class StopWatch {
   start() {
     this.intervalID = setInterval(() => {
       this.elapsedTimeInSeconds++;
-      console.log(StopWatch.formatTime(this.elapsedTimeInSeconds));
+      console.log(this.elapsedTime);
     }, 1000);
   }
   stop() {
@@ -14,6 +14,10 @@ class StopWatch {
   reset() {
     this.elapsedTimeInSeconds = 0;
   }
+  get elapsedTime() {
+    return StopWatch.formatTime(this.elapsedTimeInSeconds)
+  }
+
   static formatTime(timeSeconds) {
     const hours = Math.floor(timeSeconds / 3600);
     const minutes = Math.floor((timeSeconds % 3600) / 60);
