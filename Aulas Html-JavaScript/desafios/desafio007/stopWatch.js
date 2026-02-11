@@ -1,21 +1,24 @@
 class StopWatch {
-  elapsedTimeInSeconds = 0;
-  intervalID = null;
+  // Colocar # antes de um nome torna ele um membro privado que so pode ser acessado dentro da classe
+  #elapsedTimeInSeconds = 0;
+  #intervalID = null;
 
-  start() {
-    this.intervalID = setInterval(() => {
-      this.elapsedTimeInSeconds++;
-      console.log(this.elapsedTime);
+  start(Callback = () => {}) {
+    this.#intervalID = setInterval(() => {
+      this.#elapsedTimeInSeconds++;
+      Callback();
     }, 1000);
   }
-  stop() {
-    clearInterval(this.intervalID);
+  stop(Callback = () => {}) {
+    clearInterval(this.#intervalID);
+    Callback();
   }
-  reset() {
-    this.elapsedTimeInSeconds = 0;
+  reset(Callback = () => {}) {
+    this.#elapsedTimeInSeconds = 0;
+    Callback();
   }
   get elapsedTime() {
-    return StopWatch.formatTime(this.elapsedTimeInSeconds)
+    return StopWatch.formatTime(this.#elapsedTimeInSeconds);
   }
 
   static formatTime(timeSeconds) {
@@ -38,6 +41,21 @@ class StopWatch {
     }
   }
 }
-
 const sw1 = new StopWatch();
-sw1.start();
+const startBtn = document.getElementById("start");
+const stopBtn = document.getElementById("pause");
+const resetBtn = document.getElementById("reset");
+const stopwatchDisplay = document.getElementById("stopwatch-display");
+function UpdateDisplay() {
+  stopwatchDisplay.innerText = sw1.elapsedTime;
+}
+
+startBtn.addEventListener("click", () => {
+  sw1.start(UpdateDisplay);
+});
+stopBtn.addEventListener("click", () => {
+  sw1.stop();
+});
+resetBtn.addEventListener("click", () => {
+  sw1.reset(UpdateDisplay);
+});

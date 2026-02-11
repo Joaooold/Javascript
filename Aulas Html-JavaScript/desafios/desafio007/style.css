@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Raleway", sans-serif;
+}
+:root {
+  --stopwatch-primary-color: #033f63;
+  --stopwatch-primary-shade: #05639e;
+  --stopwatch-secundary-color: #e5a78a;
+  --stopwatch-secundary-shade: #f0cdbc;
+  --stopwatch-light-color: #e9f1f7;
+  --body-background-color: #9cd7fc;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  font-size: 2rem;
+  background-color: var(--body-background-color);
+}
+
+#stopwatch-box {
+  background-color: var(--stopwatch-primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#button-box {
+  margin: 1rem 0 0.5rem 0;
+}
+@media (max-width: 600px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  border: 2px solid var(--stopwatch-light-color);
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--stopwatch-secundary-color);
+  color: var(--stopwatch-primary-color);
+}
+
+button.secundary-button {
+  background-color: var(--stopwatch-primary-color);
+  color: var(--stopwatch-secundary-shade);
+}
+
+button:hover {
+  background-color: var(--stopwatch-secundary-shade);
+}
+button.secundary-button:hover {
+  background-color: var(--stopwatch-primary-shade);
+}
+
+button:focus {
+  border: 2px solid var(--stopwatch-primary-shade);
+}
+#stopwatch-display {
+  font-family: "Major Mono Display", "Orbitron";
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
