@@ -80,6 +80,8 @@ const metaDefaturamento = listaDeFaturamentos.filter((metaFaturamentoAtingida) =
 
 console.log(metaDefaturamento);
 
+// Metodo reduce()
+
 const faturamentoAnual = listaDeFaturamentos.reduce((acumulador, elementoAtual) => acumulador + elementoAtual, 0);
 
 console.log(`O faturamento anual foi de ${faturamentoAnual}`)
