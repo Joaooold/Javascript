@@ -61,5 +61,40 @@ const vendas = [
   { id: 4, valor: 4100 },
   { id: 5, valor: 1800 },
 ];
-const vendasTotal = vendas.reduce((acumulador, elemntoAtual) => {acumulador + elemntoAtual.valor,0})
-console.log(vendasTotal)
+const vendasTotal = vendas.reduce((acumulador, elementoAtual) => acumulador + elementoAtual.valor, 0);
+// console.log(vendasTotal);
+
+// Exercício 8: Você tem um array de objetos representando avaliações de clientes, onde cada
+// objeto contém uma pontuação de satisfação (de 1 a 5). Utilize o método .reduce() para
+// calcular a média de satisfação dos clientes. Qual será a média?
+const clientesSatisfacao = [
+  { cliente: "João", pontuacao: 4 },
+  { cliente: "Maria", pontuacao: 5 },
+  { cliente: "Pedro", pontuacao: 3 },
+  { cliente: "Ana", pontuacao: 4 },
+  { cliente: "Lucas", pontuacao: 5 },
+];
+const pontuacaoMedia = clientesSatisfacao.reduce(
+  (acumulador, elementoAtual) => acumulador + elementoAtual.pontuacao,
+  0,
+);
+const mediaTotal = pontuacaoMedia / clientesSatisfacao.length;
+// console.log(mediaTotal);
+
+// Exercício 9: Você tem um array de objetos representando produtos vendidos, onde cada
+// objeto contém o nome do produto e sua categoria. Utilize o método .reduce() para criar um
+// objeto que conte quantos produtos foram vendidos em cada categoria. Como ficará o objeto
+// resultante?
+const produtosVendidos = [
+  { nome: "Camisa", categoria: "Vestuário" },
+  { nome: "Calça", categoria: "Vestuário" },
+  { nome: "Notebook", categoria: "Eletrônicos" },
+  { nome: "Celular", categoria: "Eletrônicos" },
+  { nome: "Tênis", categoria: "Calçados" },
+  { nome: "Meias", categoria: "Vestuário" },
+];
+const contagemPorCategoria = produtosVendidos.reduce((contagem, produto) => {
+  contagem[produto.categoria] = (contagem[produto.categoria] || 0) + 1;
+  return contagem
+}, {});
+console.log(contagemPorCategoria)
