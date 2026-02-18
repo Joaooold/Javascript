@@ -84,5 +84,19 @@ console.log(metaDefaturamento);
 
 const faturamentoAnual = listaDeFaturamentos.reduce((acumulador, elementoAtual) => acumulador + elementoAtual, 0);
 
-console.log(`O faturamento anual foi de ${faturamentoAnual}`)
-console.log(`O faturamento médio do ultimo ano foi de ${faturamentoAnual / listaDeFaturamentos.length}`)
+console.log(`O faturamento anual foi de ${faturamentoAnual}`);
+console.log(`O faturamento médio do ultimo ano foi de ${faturamentoAnual / listaDeFaturamentos.length}`);
+
+// Metodo forEach
+let numerosEx = [1, 2, 3, 4, 5];
+let controle = 0;
+
+numerosEx.forEach((numero) => (controle += numero));
+console.log(controle);
+
+const usuario = [
+  { nome: "Joao", idade: 23 },
+  { nome: "Luiza", idade: 20 },
+  { nome: "Lucelia", idade: 40 },
+];
+usuario.forEach((usuarios) => console.log(usuarios.idade));

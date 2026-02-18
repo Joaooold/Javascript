@@ -95,6 +95,65 @@ const produtosVendidos = [
 ];
 const contagemPorCategoria = produtosVendidos.reduce((contagem, produto) => {
   contagem[produto.categoria] = (contagem[produto.categoria] || 0) + 1;
-  return contagem
+  return contagem;
 }, {});
-console.log(contagemPorCategoria)
+// console.log(contagemPorCategoria)
+
+// Exercício 10: Crie uma função tradicional chamada calcularDesconto que receba o preço
+// de umproduto e a porcentagem de desconto, e retorne o valor do produto com o desconto
+// aplicado. Após criar a função tradicional, transforme-a em uma Arrow Function.
+// função normal
+const precoProduto = 200;
+const percentualDesconto = 15;
+function calcularDesconto(preco, desconto) {
+  return preco - preco * (desconto / 100);
+}
+const resultado = calcularDesconto(precoProduto, percentualDesconto);
+// console.log(resultado);
+// arrowFunction
+const calcularDescontoArrow = (preco, desconto) => preco - preco * (desconto / 100);
+const resultadoArrow = calcularDescontoArrow(precoProduto, percentualDesconto);
+// console.log(resultadoArrow);
+
+// Exercício 11: Crie uma função tradicional chamada filtrarPorCategoria que receba uma
+// lista de produtos e uma categoria, e retorne os produtos que pertencem àquela categoria. Após
+// criar a função tradicional, transforme-a em uma Arrow Function.
+// função normal
+const produtos = [
+  { nome: "Camisa", categoria: "Vestuário" },
+  { nome: "Notebook", categoria: "Eletrônicos" },
+  { nome: "Tênis", categoria: "Calçados" },
+  { nome: "Calça", categoria: "Vestuário" },
+];
+const categoriaDesejada = "Vestuário";
+function filtrarPorCategoria(produtos, categoria) {
+  return produtos.filter(function (produto) {
+    return produto.categoria === categoria;
+  });
+}
+const resultadoCategoria = filtrarPorCategoria(produtos, categoriaDesejada);
+// console.log(resultadoCategoria);
+// Função Arrow
+const filtrarPorCategoriaArrow = (produtos, categoria) => produtos.filter((produto) => produto.categoria === categoria);
+filtrarPorCategoriaArrow(produtos, categoriaDesejada);
+console.log(filtrarPorCategoriaArrow(produtos, categoriaDesejada));
+
+// Exercício 12: Crie uma função tradicional chamada calcularFaturamentoTotal que
+// receba uma lista de vendas e retorne o faturamento total somando o valor de todas as vendas.
+// Após criar a função tradicional, transforme-a em uma Arrow Function.
+const listaVendas = [
+  { id: 1, valor: 1500 },
+  { id: 2, valor: 2300 },
+  { id: 3, valor: 3200 },
+];
+function calcularFaturamentoTotal(vendas) {
+  const vendasTotal = vendas.reduce(function (total, venda) {
+    return total + venda.valor;
+  }, 0);
+  return vendasTotal;
+}
+const faturamentoTotal = calcularFaturamentoTotal(listaVendas);
+// console.log(faturamentoTotal);
+// Arrow Function
+const calcularFaturamentoTotalArrow = (vendas) => vendas.reduce((total, venda) => total + venda.valor, 0);
+console.log(calcularFaturamentoTotalArrow(listaVendas))
