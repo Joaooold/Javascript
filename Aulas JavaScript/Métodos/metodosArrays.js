@@ -100,3 +100,34 @@ const usuario = [
   { nome: "Lucelia", idade: 40 },
 ];
 usuario.forEach((usuarios) => console.log(usuarios.idade));
+
+// +Exemplos
+const alunos = [
+  { nome: "Alice", nota: 8 },
+  { nome: "Bob", nota: 8.5 },
+  { nome: "João", nota: 9.5 },
+  { nome: "Luiza", nota: 7.5 },
+  { nome: "Gabriel", nota: 9 },
+];
+// Primeiro loop encontrar a maior nota
+let maiorNota = 0;
+alunos.forEach((aluno) => {
+  if (aluno.nota > maiorNota) {
+    maiorNota = aluno.nota;
+  }
+});
+console.log(maiorNota);
+
+let notasNormalizadas = [];
+alunos.forEach((aluno, indice, array) => {
+  let notaNormalizadas = (aluno.nota / maiorNota) * 10; // Calculo de nota normalizada
+  notasNormalizadas.push({
+    nome: aluno.nome,
+    notaOriginal: aluno.nota,
+    notaNormalizadas: notaNormalizadas.toFixed(2),
+  });
+  console.log(
+    `Aluno ${indice + 1}/${array.length}: ${aluno.nome} - nota Original: ${aluno.nota}, nota Normalizada ${notaNormalizadas.toFixed(2)}`,
+  );
+});
+console.log("Notas Normalizadas", notasNormalizadas)
