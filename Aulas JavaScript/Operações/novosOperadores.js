@@ -19,5 +19,13 @@ const pessoa = {
 
 // Operador de coalescência nula
 const numeroDeParticipantes = null;
-const participantes = numeroDeParticipantes ??  0;
-console.log(participantes)
+const participantes = numeroDeParticipantes ?? 0;
+// console.log(participantes);
+
+// Operador REST
+function sum(...parcela) {
+  return parcela.reduce((acc, cureentValue) => {
+    acc + cureentValue, 0
+  });
+}
+console.log(sum(2, 4, 6, 8, 9, 10));
