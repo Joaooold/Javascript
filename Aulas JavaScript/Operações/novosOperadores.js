@@ -23,9 +23,28 @@ const participantes = numeroDeParticipantes ?? 0;
 // console.log(participantes);
 
 // Operador REST
+// Junta parâmetros de um funcao
 function sum(...parcela) {
   return parcela.reduce((acc, cureentValue) => {
     acc + cureentValue, 0
   });
 }
 console.log(sum(2, 4, 6, 8, 9, 10));
+
+// Operador SPREAD
+// Ele permite que você copie ou modifique arrays e objetos de maneira fácil e eficiente.
+const objectA = {
+  name: "joao",
+  sobrenome:"batista",
+  id: 1
+}
+const listA = [2, 33, 555, 1 ,0 ,45]
+
+const listB = [...listA]
+const objectB = {...objectA, saldoBancario: "1_000_000_000"}
+listB[2] = 1000
+
+console.log(listA)
+console.log(listB)
+console.log(objectA)
+console.log(objectB)
