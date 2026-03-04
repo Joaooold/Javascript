@@ -16,3 +16,16 @@ const produto3 = JSON.parse(JSON.stringify(produto))
 console.log('copia profunda do produto', produto3)
 produto3.preco = 50
 console.log('copia profunda do produto', produto3)
+
+// shallow&deep copy - aninhamento
+const originalFinanceiro = {
+  mes: "Janeiro",
+  resceitas: 10000,
+  despesas: 7000,
+  detalhes: {
+    clientesAtendidos: 50,
+    filial: "Centro"
+  }
+}
+
+
