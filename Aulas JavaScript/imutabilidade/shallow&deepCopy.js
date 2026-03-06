@@ -17,7 +17,7 @@ console.log('copia profunda do produto', produto3)
 produto3.preco = 50
 console.log('copia profunda do produto', produto3)
 
-// shallow&deep copy - aninhamento
+// shallow&deep freezing - 
 const originalFinanceiro = {
   mes: "Janeiro",
   resceitas: 10000,
@@ -27,5 +27,23 @@ const originalFinanceiro = {
     filial: "Centro"
   }
 }
+// shallow freezing - congelamento superficial
+Object.freeze(originalFinanceiro) // usando este metodo so congela o nivel 1
+originalFinanceiro.mes = "Fevereiro"
+originalFinanceiro.detalhes.filial = "Zona norte"
+console.log(originalFinanceiro)
+
+// Deep freezing - congelamento profundo - precisa de uma função
+function deepFreze(objeto) {
+  Object.keys(objeto).forEach((key) => {
+    if(typeof objeto[key] === "object" && objeto[key] !== null) {
+      deepFreze(objeto[key]) // detalhes
+    }
+  })
+  return Object.freeze(objeto)
+}
+console.log(deepFreze(originalFinanceiro))
+
+
 
 
