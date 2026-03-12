@@ -15,3 +15,5 @@ console.log("Nome atualizado", atualizarNome);
 // Copiar com assign
 const userAtualizadoAssign = Object.assign({}, user2, {nome: "Batista",financeiro: 3000});
 console.log(userAtualizadoAssign)
+console.log("Hello")
+console.log(1+1)
