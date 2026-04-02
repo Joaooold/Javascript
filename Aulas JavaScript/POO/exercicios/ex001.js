@@ -4,7 +4,7 @@ class Member {
     this.email = email;
     this.password = password;
   }
-  authenticate = (email, password) => {
+  authenticate(email, password) {
     if (email === this.email && password === this.password) {
       return console.log("Login realizado com sucesso");
     } else {
@@ -20,15 +20,22 @@ alice.authenticate("alice@email.com", "password123");
 
 //////////////////////////////////////
 class Item {
-  constructor(name, description, price, quantityAvailable) {
+  constructor(name, description, price, quantityAvailable = 0) {
     this.name = name;
     this.description = description;
     this.price = price;
     this.quantityAvailable = quantityAvailable;
   }
-  addToInventory = (quantity) => {
-    return quantity += this.quantityAvailable;
+  addToInventory(quantity) {
+    this.quantityAvailable += quantity;
   };
+  applyOffer(discount) {
+    return this.price * ((100 - discount) / 100);
+  }
 }
-const chair = new Item("Cadeira de Escritório", "Cadeira confortávelcom ajuste de altura", 150);
-console.log(chair.addToInventory(50))
+const chair = new Item("Cadeira de Escritório", "Cadeira confortável com ajuste de altura", 150);
+chair.addToInventory(50);
+console.log(chair.quantityAvailable); // 50
+console.log(chair.applyOffer(20)); // 120
+console.log(chair.applyOffer(10)); // 135
+
