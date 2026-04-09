@@ -1,0 +1,23 @@
+Regras do Desafio: 
+1. Classe Post: 
+○ Deve representar uma publicação no blog. 
+○ Deve conter os atributos: título, conteúdo, data de publicação, e autor (que será 
+uma instância da classe Author). 
+○ Deve conter um array de comentários (objetos da classe Comment). 
+○ Deve possuir um método chamado adicionarComentario, que recebe uma 
+instância da classe Comment e a adiciona à lista de comentários. 
+
+2. Classe Comment: 
+○ Deve representar um comentário de um post. 
+○ Deve conter os atributos: autor do comentário e conteúdo. 
+
+3. Classe Author: 
+○ Deve representar o autor de um post. 
+○ Deve conter os atributos: nome e uma lista de posts (objetos da classe Post). 
+○ Deve possuir um método chamado criarPost, que cria e retorna uma 
+instância da classe Post, associando o autor à publicação e adicionando o post 
+à lista do autor. 
+Objetivo: 
+Implemente a estrutura acima em código modularizado, utilizando o princípio de classes e 
+associações. Teste a funcionalidade criando autores, posts e adicionando comentários aos 
+posts.
